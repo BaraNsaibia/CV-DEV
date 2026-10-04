@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -571,8 +571,8 @@
       <li><a href="#contact" onclick="closeMenu()" data-fr="Contact" data-en="Contact">Contact</a></li>
       <li>
         <div class="lang-toggle" id="langToggle">
-          <button class="lang-btn active" data-lang="fr" onclick="setLang('fr')">🇫🇷 FR</button>
-          <button class="lang-btn" data-lang="en" onclick="setLang('en')">🇬🇧 EN</button>
+          <button class="lang-btn" data-lang="fr" onclick="setLang('fr')">🇫🇷 FR</button>
+          <button class="lang-btn active" data-lang="en" onclick="setLang('en')">🇬🇧 EN</button>
         </div>
       </li>
     </ul>
@@ -614,8 +614,8 @@
     <div class="section-inner">
       <div class="stats-row animate-on-scroll">
         <div class="stat-card">
-          <div class="stat-num">2</div>
-          <div class="stat-label" data-fr="Stages institutionnels" data-en="Institutional internships">Stages institutionnels</div>
+          <div class="stat-num">3</div>
+          <div class="stat-label" data-fr="Stages institutionnels" data-en="Institutional internships">Institutional internships</div>
         </div>
         <div class="stat-card">
           <div class="stat-num">40+</div>
@@ -819,7 +819,7 @@
   <!-- ===== JAVASCRIPT ===== -->
   <script>
     // ---- Language System ----
-    let currentLang = 'fr';
+    let currentLang = 'en';
 
     function setLang(lang) {
       currentLang = lang;
@@ -910,8 +910,8 @@
 
     document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
 
-    // Initialize with French
-    setLang('fr');
+    // Initialize with English
+    setLang('en');
   </script>
 </body>
 </html>
