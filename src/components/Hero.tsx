@@ -78,7 +78,7 @@ export const Hero: React.FC<HeroProps> = ({ lang }) => {
             </p>
 
             {/* Mobile-only Portrait (Positioned right above the blue button on phones) */}
-            <div className="hero-visual hero-visual-mobile">
+            <div className="hero-visual-mobile">
               {renderPortraitCard()}
             </div>
 

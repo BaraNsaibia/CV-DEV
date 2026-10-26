@@ -1393,8 +1393,14 @@ button {
     flex-wrap: wrap !important;
   }
 
-  .hero-visual-desktop {
+  .hero-visual-desktop,
+  .hero-grid > .hero-visual-desktop {
     display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
   }
 
   .hero-visual-mobile {
@@ -1402,12 +1408,7 @@ button {
     justify-content: center !important;
     width: 100% !important;
     margin: 0.75rem 0 1.25rem 0 !important;
-  }
-
-  .hero-visual {
-    width: 100% !important;
-    display: flex !important;
-    justify-content: center !important;
+    position: relative !important;
   }
 
   .hero-card-wrapper {
