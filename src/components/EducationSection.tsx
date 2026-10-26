@@ -1,5 +1,5 @@
-import React from 'react';
-import { GraduationCap, Award, CheckCircle, ExternalLink, BookOpen } from 'lucide-react';
+import React, { useState } from 'react';
+import { GraduationCap, Award, ChevronDown, ChevronUp } from 'lucide-react';
 import { Language } from '../types';
 import { certifications } from '../data/portfolioData';
 
@@ -8,6 +8,8 @@ interface EducationSectionProps {
 }
 
 export const EducationSection: React.FC<EducationSectionProps> = ({ lang }) => {
+  const [showAllMobileCerts, setShowAllMobileCerts] = useState<boolean>(false);
+
   return (
     <section className="section" id="education" style={{ background: 'var(--bg-secondary)' }}>
       <div className="container">
@@ -28,7 +30,7 @@ export const EducationSection: React.FC<EducationSectionProps> = ({ lang }) => {
 
         {/* Education Hero Card */}
         <div
-          className="glass-card"
+          className="glass-card education-hero-card"
           style={{
             padding: '2rem',
             marginBottom: '3rem',
@@ -92,7 +94,7 @@ export const EducationSection: React.FC<EducationSectionProps> = ({ lang }) => {
           </div>
         </div>
 
-        {/* Certifications Grid */}
+        {/* Certifications Header */}
         <div style={{ marginBottom: '1.5rem' }}>
           <h3 style={{ fontSize: '1.2rem', fontWeight: 700, marginBottom: '0.5rem' }}>
             {lang === 'en' ? 'Verified Industry Certifications & Credentials' : 'Certifications Industrielles Vérifiées'}
@@ -104,29 +106,56 @@ export const EducationSection: React.FC<EducationSectionProps> = ({ lang }) => {
           </p>
         </div>
 
+        {/* Certifications Grid */}
         <div className="certs-grid">
-          {certifications.map((cert) => (
-            <div key={cert.id} className="cert-card">
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '0.5rem' }}>
-                <span className="cert-badge">{cert.badgeText}</span>
-                <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', color: 'var(--text-muted)' }}>
-                  {cert.year}
-                </span>
-              </div>
+          {certifications.map((cert, index) => {
+            const isExtraOnMobile = index >= 4 && !showAllMobileCerts;
 
-              <div>
-                <h4 style={{ fontSize: '1rem', fontWeight: 700, lineHeight: '1.4' }}>{cert.title}</h4>
-                <div style={{ fontSize: '0.82rem', color: 'var(--accent-primary)', fontWeight: 600, marginTop: '0.2rem' }}>
-                  {cert.issuer}
+            return (
+              <div
+                key={cert.id}
+                className={`cert-card ${isExtraOnMobile ? 'mobile-hidden-cert' : ''}`}
+              >
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '0.5rem' }}>
+                  <span className="cert-badge">{cert.badgeText}</span>
+                  <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', color: 'var(--text-muted)' }}>
+                    {cert.year}
+                  </span>
                 </div>
-              </div>
 
-              <p style={{ fontSize: '0.82rem', color: 'var(--text-secondary)', lineHeight: '1.6' }}>
-                {cert.description[lang]}
-              </p>
-            </div>
-          ))}
+                <div>
+                  <h4 style={{ fontSize: '1rem', fontWeight: 700, lineHeight: '1.4' }}>{cert.title}</h4>
+                  <div style={{ fontSize: '0.82rem', color: 'var(--accent-primary)', fontWeight: 600, marginTop: '0.2rem' }}>
+                    {cert.issuer}
+                  </div>
+                </div>
+
+                <p style={{ fontSize: '0.82rem', color: 'var(--text-secondary)', lineHeight: '1.6' }}>
+                  {cert.description[lang]}
+                </p>
+              </div>
+            );
+          })}
         </div>
+
+        {/* Mobile toggle for extra certifications (hidden on desktop) */}
+        {certifications.length > 4 && (
+          <div className="mobile-certs-toggle-wrapper">
+            <button
+              onClick={() => setShowAllMobileCerts(!showAllMobileCerts)}
+              className="btn btn-secondary mobile-certs-toggle-btn"
+            >
+              <span>
+                {showAllMobileCerts
+                  ? (lang === 'en' ? 'Show Less Certifications' : 'Réduire les certifications')
+                  : (lang === 'en'
+                    ? `View All ${certifications.length} Certifications (+${certifications.length - 4} more)`
+                    : `Voir les ${certifications.length} certifications (+${certifications.length - 4})`)}
+              </span>
+              {showAllMobileCerts ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );

@@ -1269,3 +1269,482 @@ button {
     scroll-behavior: auto !important;
   }
 }
+
+/* ==========================================================================
+   DESKTOP SAFETY RULES (Min-Width: 769px)
+   Strictly guarantees the desktop/PC version is 100% UNTOUCHED.
+   ========================================================================== */
+@media (min-width: 769px) {
+  .mobile-hidden-project {
+    display: flex !important;
+  }
+  .mobile-projects-toggle-wrapper {
+    display: none !important;
+  }
+  .project-challenges-collapse {
+    display: block !important;
+  }
+  .project-challenges-toggle-btn {
+    display: none !important;
+  }
+  .project-challenges-desktop-label {
+    display: block !important;
+  }
+  .mobile-hidden-cert {
+    display: flex !important;
+  }
+  .mobile-certs-toggle-wrapper {
+    display: none !important;
+  }
+}
+
+/* ==========================================================================
+   MOBILE-ONLY ENHANCEMENTS & OPTIMIZATIONS (Max-Width: 768px)
+   Transforms the mobile layout into a compact, fast, organized experience.
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* 1. Global Section Spacing */
+  .section {
+    padding-top: 2.75rem !important;
+    padding-bottom: 2.75rem !important;
+  }
+
+  .section-header {
+    margin-bottom: 1.5rem !important;
+    text-align: left;
+  }
+
+  .section-eyebrow {
+    font-size: 0.68rem !important;
+    padding: 0.2rem 0.55rem !important;
+    margin-bottom: 0.4rem !important;
+  }
+
+  .section-title {
+    font-size: 1.65rem !important;
+    line-height: 1.2 !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .section-subtitle {
+    font-size: 0.85rem !important;
+    line-height: 1.5 !important;
+  }
+
+  /* 2. Compact Hero Section */
+  .hero {
+    min-height: auto !important;
+    padding-top: calc(var(--nav-height) + 1rem) !important;
+    padding-bottom: 2rem !important;
+  }
+
+  .hero-grid {
+    gap: 1.75rem !important;
+  }
+
+  .hero-content {
+    gap: 0.85rem !important;
+  }
+
+  .hero-headline {
+    font-size: 1.95rem !important;
+    line-height: 1.15 !important;
+  }
+
+  .hero-lead {
+    font-size: 0.9rem !important;
+    line-height: 1.55 !important;
+  }
+
+  .hero-opportunity-badge {
+    font-size: 0.72rem !important;
+    padding: 0.25rem 0.75rem !important;
+    gap: 0.4rem !important;
+  }
+
+  .hero-actions {
+    gap: 0.5rem !important;
+    width: 100% !important;
+  }
+
+  .hero-actions .btn {
+    padding: 0.65rem 1rem !important;
+    font-size: 0.82rem !important;
+  }
+
+  .hero-socials {
+    margin-top: 0.75rem !important;
+    padding-top: 0.75rem !important;
+    gap: 0.65rem !important;
+    flex-wrap: wrap !important;
+  }
+
+  .hero-visual {
+    margin-top: 0.5rem !important;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  .hero-card-wrapper {
+    max-width: 220px !important;
+  }
+
+  .hero-image-frame img {
+    height: 230px !important;
+    object-position: center top !important;
+  }
+
+  .hero-image-tag {
+    padding: 0.4rem 0.65rem !important;
+    bottom: 0.5rem !important;
+    left: 0.5rem !important;
+    right: 0.5rem !important;
+  }
+
+  /* 3. Projects Section Mobile Organization */
+  .projects-grid {
+    gap: 1.15rem !important;
+  }
+
+  .mobile-hidden-project {
+    display: none !important;
+  }
+
+  .mobile-projects-toggle-wrapper {
+    display: flex !important;
+    justify-content: center !important;
+    margin-top: 1.25rem !important;
+    width: 100% !important;
+  }
+
+  .mobile-projects-toggle-btn {
+    width: 100% !important;
+    padding: 0.75rem 1rem !important;
+    font-size: 0.85rem !important;
+    font-weight: 600 !important;
+    border-radius: var(--radius-sm) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.5rem !important;
+  }
+
+  .project-card {
+    border-radius: var(--radius-sm) !important;
+  }
+
+  .project-card-header {
+    height: 85px !important;
+    padding: 0.75rem !important;
+  }
+
+  .project-card-badge {
+    top: 0.5rem !important;
+    left: 0.5rem !important;
+    font-size: 0.62rem !important;
+    padding: 0.2rem 0.5rem !important;
+  }
+
+  .project-card-period {
+    top: 0.5rem !important;
+    right: 0.5rem !important;
+    font-size: 0.62rem !important;
+  }
+
+  .project-card-body {
+    padding: 1.1rem !important;
+    gap: 0.8rem !important;
+  }
+
+  .project-title {
+    font-size: 1.15rem !important;
+  }
+
+  .project-subtitle {
+    font-size: 0.8rem !important;
+  }
+
+  .project-problem {
+    font-size: 0.78rem !important;
+    padding-left: 0.5rem !important;
+    line-height: 1.5 !important;
+  }
+
+  .project-challenges-desktop-label {
+    display: none !important;
+  }
+
+  .project-challenges-toggle-btn {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    padding: 0.45rem 0.75rem !important;
+    background: var(--bg-surface-elevated) !important;
+    border: 1px solid var(--border-subtle) !important;
+    border-radius: var(--radius-xs) !important;
+    font-family: var(--font-mono) !important;
+    font-size: 0.72rem !important;
+    font-weight: 600 !important;
+    color: var(--accent-primary) !important;
+    cursor: pointer !important;
+    margin-top: 0.25rem !important;
+  }
+
+  .project-challenges-collapse {
+    display: none !important;
+    margin-top: 0.5rem !important;
+  }
+
+  .project-challenges-collapse.is-open {
+    display: block !important;
+  }
+
+  .project-challenges-list {
+    font-size: 0.78rem !important;
+    gap: 0.4rem !important;
+  }
+
+  .project-tech-row {
+    padding-top: 0.6rem !important;
+    gap: 0.3rem !important;
+  }
+
+  .tech-pill {
+    font-size: 0.68rem !important;
+    padding: 0.15rem 0.5rem !important;
+  }
+
+  .project-actions {
+    flex-wrap: wrap !important;
+    gap: 0.5rem !important;
+  }
+
+  .project-actions .btn {
+    flex: 1 1 calc(50% - 0.5rem) !important;
+    padding: 0.5rem 0.75rem !important;
+    font-size: 0.75rem !important;
+    justify-content: center !important;
+  }
+
+  /* 4. Streamlined Experience Timeline */
+  .timeline::before {
+    left: 10px !important;
+  }
+
+  .timeline-item {
+    padding-left: 32px !important;
+  }
+
+  .timeline-node {
+    left: 1px !important;
+    top: 1.15rem !important;
+    width: 18px !important;
+    height: 18px !important;
+  }
+
+  .timeline-card {
+    padding: 1.15rem !important;
+    gap: 0.8rem !important;
+  }
+
+  .timeline-role {
+    font-size: 1.05rem !important;
+  }
+
+  .timeline-company {
+    font-size: 0.85rem !important;
+  }
+
+  .timeline-meta {
+    font-size: 0.68rem !important;
+    gap: 0.5rem !important;
+    margin-top: 0.2rem !important;
+  }
+
+  .timeline-bullets {
+    font-size: 0.78rem !important;
+    gap: 0.4rem !important;
+  }
+
+  /* 5. Horizontal Scrollable Skill Tabs & 2-Col Grid */
+  .skills-nav {
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+    -webkit-overflow-scrolling: touch !important;
+    padding-bottom: 0.4rem !important;
+    margin-bottom: 1.15rem !important;
+    gap: 0.4rem !important;
+  }
+
+  .skills-nav::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .skills-tab-btn {
+    flex-shrink: 0 !important;
+    padding: 0.4rem 0.8rem !important;
+    font-size: 0.76rem !important;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.45rem !important;
+  }
+
+  .skill-item-card {
+    padding: 0.65rem 0.65rem !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.25rem !important;
+  }
+
+  .skill-item-card span[style*="font-mono"] {
+    font-size: 0.65rem !important;
+  }
+
+  /* 6. Compact About & Stats */
+  .about-grid {
+    gap: 1.75rem !important;
+  }
+
+  .stats-grid {
+    gap: 0.5rem !important;
+  }
+
+  .stat-box {
+    padding: 0.85rem 0.5rem !important;
+    gap: 0.2rem !important;
+  }
+
+  .stat-number {
+    font-size: 1.65rem !important;
+  }
+
+  .stat-label {
+    font-size: 0.65rem !important;
+  }
+
+  /* 7. Education & Certifications */
+  .education-hero-card {
+    padding: 1.25rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .mobile-hidden-cert {
+    display: none !important;
+  }
+
+  .mobile-certs-toggle-wrapper {
+    display: flex !important;
+    justify-content: center !important;
+    margin-top: 1.25rem !important;
+    width: 100% !important;
+  }
+
+  .mobile-certs-toggle-btn {
+    width: 100% !important;
+    padding: 0.75rem 1rem !important;
+    font-size: 0.85rem !important;
+    font-weight: 600 !important;
+    border-radius: var(--radius-sm) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.5rem !important;
+  }
+
+  .certs-grid {
+    gap: 0.65rem !important;
+  }
+
+  .cert-card {
+    padding: 1rem !important;
+    gap: 0.5rem !important;
+  }
+
+  /* 8. International Section */
+  .editorial-grid {
+    gap: 1.5rem !important;
+  }
+
+  .editorial-gallery {
+    gap: 1rem !important;
+  }
+
+  .editorial-img-wrap img {
+    height: 160px !important;
+  }
+
+  /* 9. Documents Hub */
+  .docs-grid {
+    gap: 0.85rem !important;
+  }
+
+  .doc-hub-card {
+    padding: 1.2rem !important;
+    gap: 0.85rem !important;
+  }
+
+  .doc-hub-card .btn {
+    flex: 1 1 100% !important;
+    justify-content: center !important;
+    padding: 0.55rem 1rem !important;
+    font-size: 0.8rem !important;
+  }
+
+  /* 10. Contact Section */
+  .contact-grid {
+    gap: 1.75rem !important;
+  }
+
+  .contact-channels {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.5rem !important;
+  }
+
+  .contact-channel-card {
+    padding: 0.75rem !important;
+    gap: 0.5rem !important;
+  }
+
+  .contact-icon-box {
+    width: 36px !important;
+    height: 36px !important;
+  }
+
+  .contact-form {
+    padding: 1.25rem !important;
+    gap: 0.85rem !important;
+  }
+
+  /* 11. Footer */
+  .footer {
+    padding: 2.5rem 0 1.75rem !important;
+  }
+
+  .footer-inner {
+    gap: 1.25rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-headline {
+    font-size: 1.8rem !important;
+  }
+
+  .hero-actions .btn {
+    flex: 1 1 100% !important;
+  }
+
+  .project-actions .btn {
+    flex: 1 1 100% !important;
+  }
+
+  .contact-channels {
+    grid-template-columns: 1fr !important;
+  }
+}
