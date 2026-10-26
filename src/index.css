@@ -596,6 +596,14 @@ button {
   position: relative;
 }
 
+.hero-visual-mobile {
+  display: none;
+}
+
+.hero-visual-desktop {
+  display: flex;
+}
+
 .hero-card-wrapper {
   position: relative;
   width: 100%;
@@ -1275,6 +1283,12 @@ button {
    Strictly guarantees the desktop/PC version is 100% UNTOUCHED.
    ========================================================================== */
 @media (min-width: 769px) {
+  .hero-visual-mobile {
+    display: none !important;
+  }
+  .hero-visual-desktop {
+    display: flex !important;
+  }
   .mobile-hidden-project {
     display: flex !important;
   }
@@ -1379,8 +1393,18 @@ button {
     flex-wrap: wrap !important;
   }
 
+  .hero-visual-desktop {
+    display: none !important;
+  }
+
+  .hero-visual-mobile {
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+    margin: 0.75rem 0 1.25rem 0 !important;
+  }
+
   .hero-visual {
-    margin-top: 0.5rem !important;
     width: 100% !important;
     display: flex !important;
     justify-content: center !important;
