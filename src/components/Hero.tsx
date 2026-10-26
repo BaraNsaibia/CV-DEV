@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { ArrowRight, Download, Mail, Github, Linkedin, MessageSquare } from 'lucide-react';
 import { Language } from '../types';
 import { portfolioMeta } from '../data/portfolioData';
@@ -8,6 +8,21 @@ interface HeroProps {
 }
 
 export const Hero: React.FC<HeroProps> = ({ lang }) => {
+  const [isMobile, setIsMobile] = useState<boolean>(() => {
+    if (typeof window !== 'undefined') {
+      return window.innerWidth <= 768;
+    }
+    return false;
+  });
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const cvHref = lang === 'fr' ? '/assets/Bara_Nsaibia_CV_FR.pdf' : '/assets/Bara_Nsaibia_CV_EN.pdf';
 
   const scrollTo = (id: string) => {
@@ -78,9 +93,11 @@ export const Hero: React.FC<HeroProps> = ({ lang }) => {
             </p>
 
             {/* Mobile-only Portrait (Positioned right above the blue button on phones) */}
-            <div className="hero-visual-mobile">
-              {renderPortraitCard()}
-            </div>
+            {isMobile && (
+              <div className="hero-visual-mobile">
+                {renderPortraitCard()}
+              </div>
+            )}
 
             {/* Action CTAs */}
             <div className="hero-actions">
@@ -160,9 +177,11 @@ export const Hero: React.FC<HeroProps> = ({ lang }) => {
           </div>
 
           {/* Hero Right Column: Authenticated Portrait (PC / Desktop only) */}
-          <div className="hero-visual hero-visual-desktop">
-            {renderPortraitCard()}
-          </div>
+          {!isMobile && (
+            <div className="hero-visual hero-visual-desktop">
+              {renderPortraitCard()}
+            </div>
+          )}
         </div>
       </div>
     </section>
