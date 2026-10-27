@@ -37,9 +37,9 @@ export const App: React.FC = () => {
     localStorage.setItem('portfolio_lang', lang);
 
     if (lang === 'fr') {
-      document.title = 'Bara Nsaibia — Développeur Full-Stack & Génie Logiciel';
+      document.title = 'Bara Nsaibia — Développeur Full-Stack & Étudiant en Génie Logiciel';
     } else {
-      document.title = 'Bara Nsaibia — Full-Stack Developer & Software Engineer';
+      document.title = 'Bara Nsaibia — Full-Stack Developer & Software Engineering Student';
     }
   }, [lang]);
 
