@@ -33,8 +33,8 @@ export const Footer: React.FC<FooterProps> = ({ lang }) => {
             </div>
             <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', maxWidth: '480px' }}>
               {lang === 'en'
-                ? 'Full-Stack Web Developer & Software Engineering Student • Available for International PFE Internships (Feb–May 2027).'
-                : 'Développeur Web Full-Stack & Étudiant en Génie Logiciel • Disponible pour stages PFE internationaux (Fév–Mai 2027).'}
+                ? 'Full-Stack Web Developer and IT Engineering Student. Available for International PFE Internship (Feb – May 2027).'
+                : 'Développeur Web Full-Stack et Étudiant en Génie Logiciel. Disponible pour stage PFE international (Fév – Mai 2027).'}
             </p>
           </div>
 

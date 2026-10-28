@@ -13,14 +13,14 @@ export const InternationalSection: React.FC<InternationalSectionProps> = ({ lang
       <div className="container">
         {/* Section Header */}
         <div className="section-header">
-          <span className="section-eyebrow">
-            {lang === 'en' ? 'DIPLOMATIC & CIVIC ENGAGEMENT' : 'ENGAGEMENT INTERNATIONAL & CIVIQUE'}
-          </span>
+          <div className="section-kicker">
+            {lang === 'en' ? '// 06. DIPLOMATIC & CIVIC ENGAGEMENT' : '// 06. ENGAGEMENT INTERNATIONAL'}
+          </div>
           <h2 className="section-title">
             {internationalLeadership.headline[lang]}
           </h2>
           <p className="section-subtitle">
-            {internationalLeadership.eventTitle[lang]} — {internationalLeadership.location[lang]}, {internationalLeadership.dates[lang]}
+            {internationalLeadership.eventTitle[lang]}, {internationalLeadership.location[lang]} ({internationalLeadership.dates[lang]})
           </p>
         </div>
 
@@ -32,13 +32,13 @@ export const InternationalSection: React.FC<InternationalSectionProps> = ({ lang
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
-                gap: '0.6rem',
-                fontSize: '0.85rem',
+                gap: '0.5rem',
+                fontSize: '0.82rem',
                 fontWeight: 600,
                 color: 'var(--accent-primary)',
               }}
             >
-              <Sparkles size={18} />
+              <Building size={16} />
               <span>{internationalLeadership.organizers[lang]}</span>
             </div>
 
@@ -93,8 +93,8 @@ export const InternationalSection: React.FC<InternationalSectionProps> = ({ lang
                 }}
               >
                 {lang === 'en'
-                  ? 'Official Delegation Assembly with youth representatives from 22 Arab Nations • Rabat, Morocco'
-                  : 'Assemblée officielle des délégations des 22 pays arabes • Rabat, Maroc'}
+                  ? 'Official Delegation Assembly with youth representatives from 22 Arab Nations (Rabat, Morocco)'
+                  : 'Assemblée officielle des délégations des 22 pays arabes (Rabat, Maroc)'}
               </div>
             </div>
 
@@ -115,8 +115,8 @@ export const InternationalSection: React.FC<InternationalSectionProps> = ({ lang
                 }}
               >
                 {lang === 'en'
-                  ? 'Bara Nsaibia — Diplomatic Workshop on Digital Safety and Algorithmic Well-being'
-                  : 'Bara Nsaibia — Atelier diplomatique sur la sécurité numérique et l\'éthique en ligne'}
+                  ? 'Bara Nsaibia: Diplomatic Workshop on Digital Safety and Algorithmic Well-being'
+                  : 'Bara Nsaibia : Atelier diplomatique sur la sécurité numérique et l\'éthique en ligne'}
               </div>
             </div>
           </div>

@@ -51,16 +51,16 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ lang }) => {
       <div className="container">
         {/* Section Header */}
         <div className="section-header">
-          <span className="section-eyebrow">
-            {lang === 'en' ? 'INITIATE DIALOGUE' : 'PRENDRE CONTACT'}
-          </span>
+          <div className="section-kicker">
+            {lang === 'en' ? '// 08. CONTACT & COLLABORATION' : '// 08. PRENDRE CONTACT'}
+          </div>
           <h2 className="section-title">
-            {lang === 'en' ? "Let's Build Something Meaningful." : 'Bâtissons Ensemble des Solutions Durables.'}
+            {lang === 'en' ? 'Discuss an Internship or Engineering Role' : 'Échanger sur une Opportunité de Stage ou de Poste'}
           </h2>
           <p className="section-subtitle">
             {lang === 'en'
-              ? 'Open to international software engineering internships (Feb–May 2027), full-stack development roles, and impactful technical collaborations.'
-              : 'Disponible pour stages de fin d\'études (PFE 2027) à l\'international, opportunités en génie logiciel full-stack et collaborations techniques à fort impact.'}
+              ? 'Available for international final-year internships (Feb – May 2027), full-stack software development roles, and technical discussions.'
+              : 'Disponible pour un stage de fin d\'études (PFE 2027) à l\'international, postes en développement logiciel full-stack et échanges techniques.'}
           </p>
         </div>
 
@@ -170,7 +170,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ lang }) => {
           </div>
 
           {/* Right Column: Clean Inquiry Form */}
-          <form className="contact-form glass-card" onSubmit={handleSubmit}>
+          <form className="contact-form card-base" onSubmit={handleSubmit}>
             <h3 style={{ fontSize: '1.25rem', fontWeight: 700 }}>
               {lang === 'en' ? 'Send a Direct Message' : 'Envoyer un Message Direct'}
             </h3>

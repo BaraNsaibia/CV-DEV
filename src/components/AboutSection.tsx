@@ -13,9 +13,9 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ lang }) => {
         <div className="about-grid">
           {/* Left Column: Authentic Recruiter Narrative */}
           <div>
-            <span className="section-eyebrow">
-              {lang === 'en' ? 'ENGINEERING IDENTITY' : 'PROFIL PROFESSIONNEL'}
-            </span>
+            <div className="section-kicker">
+              {lang === 'en' ? '// 04. PROFILE & BACKGROUND' : '// 04. PROFIL & PARCOURS'}
+            </div>
             <h2 className="section-title">
               {lang === 'en' ? 'About Bara Nsaibia' : 'À Propos de Bara Nsaibia'}
             </h2>
@@ -41,21 +41,21 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ lang }) => {
             </div>
 
             {/* Quick Strengths List */}
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem', marginTop: '2rem' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-                <Code2 size={20} color="var(--accent-primary)" />
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '0.85rem', marginTop: '1.75rem' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <Code2 size={18} color="var(--accent-primary)" />
                 <span style={{ fontSize: '0.85rem', fontWeight: 600 }}>{lang === 'en' ? 'Full-Stack Problem Solver' : 'Développeur Full-Stack Polyvalent'}</span>
               </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-                <Building2 size={20} color="var(--accent-secondary)" />
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <Building2 size={18} color="var(--accent-primary)" />
                 <span style={{ fontSize: '0.85rem', fontWeight: 600 }}>{lang === 'en' ? 'Enterprise & Public Sector' : 'Expérience Entreprise & Publique'}</span>
               </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-                <Globe size={20} color="var(--accent-primary)" />
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <Globe size={18} color="var(--accent-primary)" />
                 <span style={{ fontSize: '0.85rem', fontWeight: 600 }}>{lang === 'en' ? 'International Mobility Ready' : 'Prêt pour mobilité internationale'}</span>
               </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-                <GraduationCap size={20} color="var(--accent-secondary)" />
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <GraduationCap size={18} color="var(--accent-primary)" />
                 <span style={{ fontSize: '0.85rem', fontWeight: 600 }}>{lang === 'en' ? 'Anthropic & Harvard Certified' : 'Certifié Anthropic & Harvard'}</span>
               </div>
             </div>
@@ -66,10 +66,10 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ lang }) => {
             <div className="stat-box">
               <span className="stat-number">3</span>
               <span className="stat-label">
-                {lang === 'en' ? 'Institutional Internships' : 'Stages Institutionnels'}
+                {lang === 'en' ? 'Engineering Internships' : 'Stages en Entreprise'}
               </span>
               <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
-                {lang === 'en' ? 'France & Tunisia' : 'France & Tunisie'}
+                {lang === 'en' ? 'France (Remote) & Tunisia' : 'France (Distanciel) & Tunisie'}
               </span>
             </div>
 
@@ -86,7 +86,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ lang }) => {
             <div className="stat-box">
               <span className="stat-number">3+</span>
               <span className="stat-label">
-                {lang === 'en' ? 'Years of Software Dev' : 'Années d\'Expérience'}
+                {lang === 'en' ? 'Years of Web Dev' : 'Années de Dév. Web'}
               </span>
               <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
                 {lang === 'en' ? 'Freelance & Production' : 'Freelance & Production'}
@@ -94,7 +94,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ lang }) => {
             </div>
 
             <div className="stat-box">
-              <span className="stat-number">🇹🇳</span>
+              <span className="stat-number">1 of 2</span>
               <span className="stat-label">
                 {lang === 'en' ? 'National Youth Delegate' : 'Délégué National'}
               </span>

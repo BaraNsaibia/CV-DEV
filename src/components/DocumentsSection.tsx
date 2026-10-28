@@ -21,9 +21,9 @@ export const DocumentsSection: React.FC<DocumentsSectionProps> = ({ lang }) => {
       <div className="container">
         {/* Section Header */}
         <div className="section-header">
-          <span className="section-eyebrow">
-            {lang === 'en' ? 'DOCUMENTATION & PROOF' : 'DOSSIER & JUSTIFICATIFS'}
-          </span>
+          <div className="section-kicker">
+            {lang === 'en' ? '// 07. VERIFIED DOCUMENTATION' : '// 07. DOSSIER & JUSTIFICATIFS'}
+          </div>
           <h2 className="section-title">
             {lang === 'en' ? 'Official Documents & CV' : 'Curriculum Vitae & Dossier Officiel'}
           </h2>
@@ -40,7 +40,7 @@ export const DocumentsSection: React.FC<DocumentsSectionProps> = ({ lang }) => {
             const currentFileUrl = lang === 'fr' ? doc.fileFr : doc.fileEn;
 
             return (
-              <div key={doc.id} className="doc-hub-card glass-card">
+              <div key={doc.id} className="doc-hub-card card-base">
                 <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: '1rem' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
                     <div

@@ -32,24 +32,22 @@ export const Hero: React.FC<HeroProps> = ({ lang }) => {
 
   const renderPortraitCard = () => (
     <div className="hero-card-wrapper">
-      <div className="hero-card-glow"></div>
       <div className="hero-image-frame">
         <img
           src="/assets/photo_bara.jpg"
-          alt="Bara Nsaibia — Full-Stack Developer & Tunisian Youth Representative"
+          alt="Bara Nsaibia — Full-Stack Developer & Tunisian Youth Delegate"
           loading="eager"
         />
         <div className="hero-image-tag">
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-            <span style={{ fontSize: '1.1rem' }}>🇹🇳</span>
-            <div style={{ display: 'flex', flexDirection: 'column' }}>
-              <span style={{ fontSize: '0.78rem', fontWeight: 700, color: '#FFFFFF' }}>Bara Nsaibia</span>
-              <span style={{ fontSize: '0.68rem', color: 'rgba(255, 255, 255, 0.75)' }}>
-                {lang === 'en' ? 'Tunisian Youth Representative' : 'Représentant Jeunesse Tunisienne'}
-              </span>
-            </div>
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
+            <span style={{ fontSize: '0.82rem', fontWeight: 700, color: '#FFFFFF' }}>Bara Nsaibia</span>
+            <span style={{ fontSize: '0.72rem', color: 'rgba(255, 255, 255, 0.75)' }}>
+              {lang === 'en' ? 'Tunisian Youth Delegate • Rabat' : 'Délégué Jeunesse Tunisienne • Rabat'}
+            </span>
           </div>
-          <span style={{ fontSize: '1.1rem' }}>🇲🇦</span>
+          <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.7rem', color: '#60A5FA', fontWeight: 600 }}>
+            TN / MA
+          </span>
         </div>
       </div>
     </div>
@@ -61,28 +59,21 @@ export const Hero: React.FC<HeroProps> = ({ lang }) => {
         <div className="hero-grid">
           {/* Hero Left Column: Narrative & Action */}
           <div className="hero-content">
-            {/* Opportunity Badge */}
+            {/* Single Restrained Status Indicator */}
             <div className="hero-opportunity-badge">
               <span className="pulse-indicator"></span>
               <span>{portfolioMeta.opportunity[lang]}</span>
             </div>
 
-            {/* Eyebrow */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <span className="section-eyebrow" style={{ margin: 0 }}>
-                {lang === 'en' ? 'FULL-STACK DEVELOPER • SOFTWARE ENGINEERING' : 'DÉVELOPPEUR FULL-STACK • GÉNIE LOGICIEL'}
-              </span>
-            </div>
-
-            {/* Main Headline */}
+            {/* Main Headline: Solid, High-Contrast Typography */}
             <h1 className="hero-headline">
               {lang === 'en' ? (
                 <>
-                  Building thoughtful <span className="gradient-text">digital experiences</span>, from interface to infrastructure.
+                  Full-stack developer engineering reliable web systems from interface to infrastructure.
                 </>
               ) : (
                 <>
-                  Concevoir des <span className="gradient-text">expériences numériques</span> d'exception, de l'interface à l'infrastructure.
+                  Développeur full-stack concevant des architectures web fiables, de l'interface à l'infrastructure.
                 </>
               )}
             </h1>

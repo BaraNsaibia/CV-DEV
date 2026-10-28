@@ -39,16 +39,16 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ lang }) => {
       <div className="container">
         {/* Section Header */}
         <div className="section-header">
-          <span className="section-eyebrow">
-            {lang === 'en' ? 'ENGINEERING PORTFOLIO' : 'RÉALISATIONS LOGICIELLES'}
-          </span>
+          <div className="section-kicker">
+            {lang === 'en' ? '// 01. SELECTED WORKS' : '// 01. PROJETS SÉLECTIONNÉS'}
+          </div>
           <h2 className="section-title">
             {lang === 'en' ? 'Featured Projects & Systems' : 'Projets Phares & Architectures'}
           </h2>
           <p className="section-subtitle">
             {lang === 'en'
-              ? 'A curated selection of real-world software applications, production deployments, and technical contributions delivered across professional internships and freelance solutions.'
-              : 'Une sélection rigoureuse d\'applications logicielles concrètes, de déploiements en production et de contributions techniques réalisées dans le cadre de stages professionnels et de mandats freelance.'}
+              ? 'Real-world software engineering, client production platforms, and contributions delivered across professional internships and freelance engagements.'
+              : 'Systèmes logiciels concrets, plateformes client en production et réalisations livrées en stage professionnel et mandats freelance.'}
           </p>
         </div>
 
@@ -77,14 +77,11 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ lang }) => {
             return (
               <article
                 key={project.id}
-                className={`project-card glass-card ${isExtraOnMobile ? 'mobile-hidden-project' : ''}`}
+                className={`project-card ${isExtraOnMobile ? 'mobile-hidden-project' : ''}`}
                 id={`project-${project.id}`}
               >
-                {/* Card Visual Header */}
-                <div
-                  className="project-card-header"
-                  style={{ background: project.imageFallbackGradient }}
-                >
+                {/* Card Meta Header */}
+                <div className="project-card-header">
                   <span className="project-card-badge">{project.badge[lang]}</span>
                   <span className="project-card-period">{project.period}</span>
                 </div>
@@ -131,7 +128,6 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ lang }) => {
                       <ul className="project-challenges-list">
                         {project.engineeringChallenges.map((challenge, idx) => (
                           <li key={idx}>
-                            <CheckCircle2 size={16} />
                             <span>{challenge[lang]}</span>
                           </li>
                         ))}

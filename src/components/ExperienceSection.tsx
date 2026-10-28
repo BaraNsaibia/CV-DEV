@@ -13,16 +13,16 @@ export const ExperienceSection: React.FC<ExperienceSectionProps> = ({ lang }) =>
       <div className="container">
         {/* Section Header */}
         <div className="section-header">
-          <span className="section-eyebrow">
-            {lang === 'en' ? 'PROFESSIONAL TRAJECTORY' : 'PARCOURS PROFESSIONNEL'}
-          </span>
+          <div className="section-kicker">
+            {lang === 'en' ? '// 02. EXPERIENCE & INTERNSHIPS' : '// 02. EXPÉRIENCES & STAGES'}
+          </div>
           <h2 className="section-title">
             {lang === 'en' ? 'Work Experience & Internships' : 'Expériences & Stages en Entreprise'}
           </h2>
           <p className="section-subtitle">
             {lang === 'en'
-              ? 'Proven track record of delivering software within international remote teams, government institutions, and major industrial enterprises.'
-              : 'Expérience confirmée au sein d\'équipes internationales en distanciel, d\'institutions gouvernementales et de grandes entreprises industrielles.'}
+              ? 'Proven track record of engineering software within international remote teams, government institutions, and industrial environments.'
+              : 'Expérience confirmée au sein d\'équipes internationales en distanciel, d\'institutions gouvernementales et d\'environnements industriels.'}
           </p>
         </div>
 
@@ -31,7 +31,7 @@ export const ExperienceSection: React.FC<ExperienceSectionProps> = ({ lang }) =>
           {experiences.map((exp) => (
             <div key={exp.id} className="timeline-item">
               <div className="timeline-node"></div>
-              <div className="glass-card timeline-card">
+              <div className="card-base timeline-card">
                 {/* Header */}
                 <div className="timeline-header">
                   <div>
@@ -60,7 +60,6 @@ export const ExperienceSection: React.FC<ExperienceSectionProps> = ({ lang }) =>
                 <ul className="timeline-bullets">
                   {exp.contributions.map((item, idx) => (
                     <li key={idx}>
-                      <CheckCircle size={16} />
                       <span>{item[lang]}</span>
                     </li>
                   ))}

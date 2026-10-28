@@ -12,16 +12,16 @@ export const portfolioMeta = {
   linkedin: "https://tn.linkedin.com/in/bara-nsaibia-3a17793b1",
   whatsapp: "https://wa.me/21692049451",
   opportunity: {
-    en: "Open to International PFE Internships • February–May 2027",
-    fr: "Disponible pour Stages PFE Internationaux • Février–Mai 2027"
+    en: "Available for International PFE Internship (February – May 2027)",
+    fr: "Disponible pour Stage PFE International (Février – Mai 2027)"
   },
   tagline: {
-    en: "Building thoughtful digital experiences, from interface to infrastructure.",
-    fr: "Concevoir des expériences numériques réfléchies, de l'interface à l'infrastructure."
+    en: "Full-Stack Web Developer & Software Engineering Student",
+    fr: "Développeur Web Full-Stack & Étudiant en Génie Logiciel"
   },
   subHeadline: {
-    en: "Full-Stack Developer specializing in modern web applications, scalable backend systems, API integration, and AI-powered automation. Experienced in delivering real-world software through internships and freelance projects.",
-    fr: "Développeur Full-Stack spécialisé en applications web modernes, systèmes backend évolutifs, intégration d'API et automatisation assistée par IA. Expérimenté dans la livraison de logiciels concrets via stages et projets freelance."
+    en: "Information Technology student at ISET Sidi Bouzid specializing in Multimedia and Web Development, with hands-on full-stack experience across international remote internships, institutional systems, and production client applications.",
+    fr: "Étudiant en Technologies de l'Information à l'ISET Sidi Bouzid, spécialisé en Multimédia et Développement Web. Expérience concrète en ingénierie full-stack via stages internationaux à distance, systèmes institutionnels et déploiements en production."
   }
 };
 
@@ -738,7 +738,7 @@ export const internationalLeadership = {
     { value: "2", label: { en: "Tunisian Delegates", fr: "Délégués Tunisiens" } },
     { value: "22", label: { en: "Arab Nations", fr: "Nations Arabes" } },
     { value: "3", label: { en: "Days of Summits", fr: "Jours de Sommet" } },
-    { value: "🇹🇳 🇲🇦", label: { en: "Diplomatic Representation", fr: "Représentation Diplomatique" } }
+    { value: "TN / MA", label: { en: "Official Representation", fr: "Représentation Officielle" } }
   ]
 };
 

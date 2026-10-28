@@ -26,16 +26,16 @@ export const SkillsSection: React.FC<SkillsSectionProps> = ({ lang }) => {
       <div className="container">
         {/* Section Header */}
         <div className="section-header">
-          <span className="section-eyebrow">
-            {lang === 'en' ? 'TECHNICAL ARSENAL' : 'COMPÉTENCES TECHNIQUES'}
-          </span>
+          <div className="section-kicker">
+            {lang === 'en' ? '// 03. TECHNICAL PROFICIENCY' : '// 03. COMPÉTENCES TECHNIQUES'}
+          </div>
           <h2 className="section-title">
             {lang === 'en' ? 'Technologies & Frameworks' : 'Technologies & Environnements'}
           </h2>
           <p className="section-subtitle">
             {lang === 'en'
-              ? 'Categorized software engineering capabilities cultivated through academic rigor, institutional internships, and production system deliveries.'
-              : 'Compétences logicielles structurées, développées à travers un cursus universitaire rigoureux, des stages institutionnels et des livraisons en production.'}
+              ? 'Categorized software engineering capabilities cultivated through academic coursework, institutional internships, and production system deliveries.'
+              : 'Compétences logicielles structurées, développées à travers un cursus universitaire, des stages institutionnels et des livraisons en production.'}
           </p>
         </div>
 
@@ -46,17 +46,15 @@ export const SkillsSection: React.FC<SkillsSectionProps> = ({ lang }) => {
               key={cat.id}
               onClick={() => setActiveCategoryId(cat.id)}
               className={`skills-tab-btn ${activeCategoryId === cat.id ? 'active' : ''}`}
-              style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}
             >
-              {categoryIcons[cat.id]}
               <span>{cat.name[lang]}</span>
             </button>
           ))}
         </div>
 
         {/* Active Category Description */}
-        <div style={{ marginBottom: '1.75rem' }}>
-          <p style={{ fontSize: '0.92rem', color: 'var(--text-secondary)' }}>
+        <div style={{ marginBottom: '1.5rem' }}>
+          <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
             {currentCategory.description[lang]}
           </p>
         </div>
@@ -68,16 +66,9 @@ export const SkillsSection: React.FC<SkillsSectionProps> = ({ lang }) => {
               key={skill.name}
               className={`skill-item-card ${skill.highlight ? 'highlight' : ''}`}
             >
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-                {skill.highlight ? (
-                  <Sparkles size={16} color="var(--accent-primary)" />
-                ) : (
-                  <Check size={16} color="var(--accent-secondary)" />
-                )}
-                <span style={{ fontSize: '0.92rem', fontWeight: 600, color: 'var(--text-primary)' }}>
-                  {skill.name}
-                </span>
-              </div>
+              <span style={{ fontSize: '0.9rem', fontWeight: 600, color: 'var(--text-primary)' }}>
+                {skill.name}
+              </span>
 
               <span
                 style={{

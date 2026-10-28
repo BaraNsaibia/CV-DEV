@@ -15,28 +15,21 @@ export const EducationSection: React.FC<EducationSectionProps> = ({ lang }) => {
       <div className="container">
         {/* Section Header */}
         <div className="section-header">
-          <span className="section-eyebrow">
-            {lang === 'en' ? 'ACADEMIC & CREDENTIALS' : 'FORMATION & CERTIFICATIONS'}
-          </span>
+          <div className="section-kicker">
+            {lang === 'en' ? '// 05. ACADEMIC & CREDENTIALS' : '// 05. FORMATION & CERTIFICATIONS'}
+          </div>
           <h2 className="section-title">
             {lang === 'en' ? 'Education & Certified Skills' : 'Diplômes & Certifications Reconnues'}
           </h2>
           <p className="section-subtitle">
             {lang === 'en'
-              ? 'Academic computer science foundations complemented by rigorous global certifications from Harvard, Anthropic, Microsoft, and IBM.'
+              ? 'Academic computer science foundations complemented by verified global certifications from Harvard, Anthropic, Microsoft, and IBM.'
               : 'Fondations académiques en informatique enrichies par des certifications internationales délivrées par Harvard, Anthropic, Microsoft et IBM.'}
           </p>
         </div>
 
         {/* Education Hero Card */}
-        <div
-          className="glass-card education-hero-card"
-          style={{
-            padding: '2rem',
-            marginBottom: '3rem',
-            borderLeft: '4px solid var(--accent-primary)',
-          }}
-        >
+        <div className="card-base education-hero-card">
           <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'flex-start', gap: '1rem' }}>
             <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1.25rem' }}>
               <div
