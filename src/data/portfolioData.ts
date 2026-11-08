@@ -765,12 +765,12 @@ export const documentHub: DocumentItem[] = [
       fr: "Rapport d'Expérience Sociale & Académique"
     },
     description: {
-      en: "Comprehensive 44-page verified portfolio documenting institutional internships, ministerial attestations, leadership summits, and authentic photo records.",
-      fr: "Portfolio complet de 44 pages documentant les stages institutionnels, attestations ministérielles, sommets internationaux et pièces justificatives."
+      en: "Comprehensive 46-page verified portfolio documenting institutional internships, ministerial attestations, leadership summits, and authentic photo records.",
+      fr: "Portfolio complet de 46 pages documentant les stages institutionnels, attestations ministérielles, sommets internationaux et pièces justificatives."
     },
     fileEn: "/assets/social_experience_EN.pdf",
     fileFr: "/assets/social_experience_FR.pdf",
-    pageCount: "44 Pages",
+    pageCount: "46 Pages",
     type: "report"
   }
 ];
