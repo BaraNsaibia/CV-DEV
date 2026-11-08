@@ -755,7 +755,7 @@ export const documentHub: DocumentItem[] = [
     },
     fileEn: "/assets/Bara_Nsaibia_CV_EN.pdf",
     fileFr: "/assets/Bara_Nsaibia_CV_FR.pdf",
-    pageCount: "2 Pages",
+    pageCount: "1 Page",
     type: "cv"
   },
   {
