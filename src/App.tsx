@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Language, Theme } from './types';
 import { Navbar } from './components/Navbar';
+import { CursorTrace } from './components/CursorTrace';
 import { Hero } from './components/Hero';
 import { ProjectsSection } from './components/ProjectsSection';
 import { ExperienceSection } from './components/ExperienceSection';
@@ -55,6 +56,9 @@ export const App: React.FC = () => {
     <div className="portfolio-app">
       {/* Subtle ambient grid pattern */}
       <div className="bg-grid-pattern" aria-hidden="true" />
+
+      {/* Screen Mouse Traceability Canvas */}
+      <CursorTrace />
 
       {/* Main Navigation */}
       <Navbar

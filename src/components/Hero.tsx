@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, Download, Mail, Github, Linkedin, MessageSquare } from 'lucide-react';
+import { ArrowRight, Download, Mail, Github, Linkedin } from 'lucide-react';
 import { Language } from '../types';
 import { portfolioMeta } from '../data/portfolioData';
+import { Hero3DCard } from './Hero3DCard';
 
 interface HeroProps {
   lang: Language;
@@ -29,29 +30,6 @@ export const Hero: React.FC<HeroProps> = ({ lang }) => {
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: 'smooth' });
   };
-
-  const renderPortraitCard = () => (
-    <div className="hero-card-wrapper">
-      <div className="hero-image-frame">
-        <img
-          src="/assets/photo_bara.jpg"
-          alt="Bara Nsaibia — Full-Stack Developer & Tunisian Youth Delegate"
-          loading="eager"
-        />
-        <div className="hero-image-tag">
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <span style={{ fontSize: '0.82rem', fontWeight: 700, color: '#FFFFFF' }}>Bara Nsaibia</span>
-            <span style={{ fontSize: '0.72rem', color: 'rgba(255, 255, 255, 0.75)' }}>
-              {lang === 'en' ? 'Tunisian Youth Delegate • Rabat' : 'Délégué Jeunesse Tunisienne • Rabat'}
-            </span>
-          </div>
-          <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.7rem', color: '#60A5FA', fontWeight: 600 }}>
-            TN / MA
-          </span>
-        </div>
-      </div>
-    </div>
-  );
 
   return (
     <section className="hero" id="hero">
@@ -86,7 +64,7 @@ export const Hero: React.FC<HeroProps> = ({ lang }) => {
             {/* Mobile-only Portrait (Positioned right above the blue button on phones) */}
             {isMobile && (
               <div className="hero-visual-mobile">
-                {renderPortraitCard()}
+                <Hero3DCard lang={lang} />
               </div>
             )}
 
@@ -144,17 +122,6 @@ export const Hero: React.FC<HeroProps> = ({ lang }) => {
                 <Mail size={18} />
                 <span>Email</span>
               </a>
-
-              <a
-                href={portfolioMeta.whatsapp}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hero-social-link"
-                title="WhatsApp Direct"
-              >
-                <MessageSquare size={18} />
-                <span>WhatsApp</span>
-              </a>
             </div>
 
             {/* Core Tech Chips */}
@@ -170,7 +137,7 @@ export const Hero: React.FC<HeroProps> = ({ lang }) => {
           {/* Hero Right Column: Authenticated Portrait (PC / Desktop only) */}
           {!isMobile && (
             <div className="hero-visual hero-visual-desktop">
-              {renderPortraitCard()}
+              <Hero3DCard lang={lang} />
             </div>
           )}
         </div>

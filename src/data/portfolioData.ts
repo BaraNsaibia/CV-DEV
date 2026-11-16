@@ -10,7 +10,6 @@ export const portfolioMeta = {
   },
   github: "https://github.com/BaraNsaibia",
   linkedin: "https://tn.linkedin.com/in/bara-nsaibia-3a17793b1",
-  whatsapp: "https://wa.me/21692049451",
   opportunity: {
     en: "Available for International PFE Internship (February – May 2027)",
     fr: "Disponible pour Stage PFE International (Février – Mai 2027)"

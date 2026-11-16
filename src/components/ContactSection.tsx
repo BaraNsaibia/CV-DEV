@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Linkedin, Github, MessageSquare, Send, CheckCircle2, Phone, MapPin } from 'lucide-react';
+import { Mail, Linkedin, Github, Send, CheckCircle2, Phone, MapPin } from 'lucide-react';
 import { Language } from '../types';
 import { portfolioMeta } from '../data/portfolioData';
 
@@ -122,24 +122,6 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ lang }) => {
                   <div style={{ fontSize: '0.9rem', fontWeight: 700 }}>GitHub</div>
                   <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
                     @BaraNsaibia
-                  </div>
-                </div>
-              </a>
-
-              {/* WhatsApp */}
-              <a
-                href={portfolioMeta.whatsapp}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="contact-channel-card"
-              >
-                <div className="contact-icon-box" style={{ color: '#25D366' }}>
-                  <MessageSquare size={22} />
-                </div>
-                <div>
-                  <div style={{ fontSize: '0.9rem', fontWeight: 700 }}>WhatsApp</div>
-                  <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
-                    {portfolioMeta.phone}
                   </div>
                 </div>
               </a>
